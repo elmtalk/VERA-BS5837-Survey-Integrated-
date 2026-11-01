@@ -1,0 +1,4 @@
+VERA Projects prototype
+Build: 2026-11-01-projects-1
+Base: VERA V1 Beta assessment UI/engine
+Storage schema: VERA Projects v1
