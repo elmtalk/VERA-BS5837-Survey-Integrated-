@@ -194,6 +194,18 @@
       gap: 0.5rem;
       margin-top: 0.75rem;
     }
+    .vera-primary-actions {
+      display: grid;
+      gap: 0.65rem;
+      margin-top: 0.75rem;
+    }
+    .vera-primary-actions .btn-primary {
+      width: 100%;
+      justify-content: center;
+      padding: 0.75rem 1rem;
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
     button {
       border-radius: 999px;
       border: none;
@@ -2162,12 +2174,15 @@ main{max-width:1480px!important;padding:1.25rem 1.35rem 3rem!important;}
 
         <div class="vera-public-beta-note"><strong>Public beta.</strong> Please report unexpected results using the feedback button.</div>
 
-        <div class="btn-row">
+        <div class="vera-primary-actions">
           <button class="btn-primary" id="btnAssess">Run VERA assessment</button>
+          <button class="btn-primary" id="btnSaveTree">Complete assessment and save</button>
+        </div>
+
+        <div class="btn-row">
           <button class="btn-secondary" id="btnClear">Reset</button>
           <button class="btn-secondary" id="btnDownloadPng">Download PNG snapshot</button>
           <button class="btn-secondary" id="btnReportOddResult">Report an odd result</button>
-          <button class="btn-secondary" id="btnSaveTree">Complete assessment</button>
           <button class="btn-secondary" id="btnExportCurrentCsv">Export current CSV</button>
           <button class="btn-secondary" id="btnExportSavedCsv">Export project CSV</button>
           <button class="btn-ghost" id="btnClearSavedTrees">Project manager</button>

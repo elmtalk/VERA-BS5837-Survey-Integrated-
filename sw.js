@@ -1,4 +1,4 @@
-const CACHE_NAME = 'vproj-20261101-v2-core';
+const CACHE_NAME = 'vproj-20261102-v2-1-core';
 const CORE_ASSETS = [
   './', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png',
   './icon-maskable-192.png', './icon-maskable-512.png', './apple-touch-icon.png', './favicon-32.png', './LICENSE.txt'
