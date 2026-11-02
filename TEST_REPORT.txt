@@ -1,0 +1,48 @@
+VERA Projects PWA v2 — validation report
+1 November 2026
+
+BASE / ENGINE
+- Rebuilt from the current VERA production source identified by engine build marker: 2026-09-08-transparent-twigs.
+- Added separate build marker: 2026-11-01-projects-v2-current-engine.
+- The core assessment click handler was compared with the base and is unchanged.
+- currentCsvRow() was compared with the base and is unchanged.
+- Key assessment functions compared unchanged: veraPercentileFromQuantiles, summariseVAI, summariseHeritage, summariseCultural, veraPathwayConclusion and veraAncientGate.
+- Current export schema retained: vera-v1-tree-biography-1.
+
+STATIC VALIDATION
+PASS — all inline JavaScript parsed with node --check.
+PASS — service worker parsed with node --check.
+PASS — manifest is valid JSON.
+PASS — no duplicate HTML IDs detected.
+PASS — all service-worker core assets are present in the package.
+PASS — service worker cleanup is restricted to caches beginning vproj-; it does not delete public VERA vera- caches.
+PASS — ZIP integrity check returned no errors.
+
+BROWSER LOGIC HARNESS
+The execution environment blocks Chromium navigation to localhost/file URLs and denies IndexedDB to about:blank. To still exercise the application code in a real Chromium JS/DOM runtime, the browser harness loaded the document directly and forced the app's supported fallback storage path.
+
+19/19 checks passed, including:
+- app initialisation;
+- first-use New Project flow;
+- project creation;
+- autosaved draft record;
+- second-project isolation;
+- project manager listing/opening;
+- restoration of tree reference and DBH;
+- stable tree UUID with changed visible tree reference (Mergin-style link payload);
+- rich current CSV fields retained;
+- current VERA schema retained;
+- completed assessment persisted with computed CSV row;
+- no browser page errors.
+
+INDEXEDDB / SERVICE WORKER LIMITATION OF THIS TEST ENVIRONMENT
+A true HTTP(S) browser smoke test of IndexedDB persistence across reload and service-worker offline reload could not be run because the managed Chromium environment blocks local navigation. The IndexedDB schema and service-worker code passed static validation, but those two behaviours should be confirmed once on the deployed test URL/device before treating this as a Play Store production build.
+
+RECOMMENDED FIRST DEVICE CHECK
+1. Deploy to a NEW test repository/site; do not overwrite public VERA.
+2. Create Project A, enter a partially completed assessment, close the PWA, reopen it and confirm the draft returns.
+3. Add a photograph, close/reopen, confirm the photo returns.
+4. Create Project B and confirm Project A records do not appear in it.
+5. Reopen Project A and export CSV + JSON backup.
+6. Put the device offline, close/reopen the PWA and confirm the app and draft still open.
+7. Test a link containing project_uuid, tree_uuid, tree_ref and source=mergin; then repeat with a changed tree_ref and confirm the tree UUID stays unchanged.

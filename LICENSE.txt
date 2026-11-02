@@ -1,0 +1,11 @@
+VERA — Veteran Evidence & Reasoned Assessment
+A Bud&Leaf application
+
+Copyright © 2026 James Roberts. All rights reserved.
+
+VERA is proprietary software made available for use through the published application.
+No licence is granted to reproduce, modify, redistribute, sublicense, sell, incorporate into another product, or otherwise exploit the source code, interface artwork, graphics, documentation, or other original VERA materials, except for rights strictly necessary to access and use the published application and any rights required by the hosting platform's terms.
+
+The ideas, factual methods, published datasets, standards, guidance and third-party materials referenced by VERA are not claimed as James Roberts' copyright merely by being referenced or implemented in the application. Those materials remain subject to their own copyright, database rights, licences and terms.
+
+Permission for uses beyond the published application must be obtained in writing from James Roberts.
