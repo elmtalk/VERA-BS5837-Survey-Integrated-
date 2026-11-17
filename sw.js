@@ -1,6 +1,6 @@
-const CACHE_NAME = 'vproj-20261102-v2-1-core';
+const CACHE_NAME = 'vproj-20261117-sharing-v1';
 const CORE_ASSETS = [
-  './', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png',
+  './', './index.html', './advanced-save-export.js', './manifest.webmanifest', './icon-192.png', './icon-512.png',
   './icon-maskable-192.png', './icon-maskable-512.png', './apple-touch-icon.png', './favicon-32.png', './LICENSE.txt'
 ];
 self.addEventListener('install', event => {
